@@ -1,6 +1,22 @@
-@InfraManager_HostAddress = http://localhost:5152
+@InfraManager_HostAddress = https://localhost:44362
 
 GET {{InfraManager_HostAddress}}/newservice/
 Accept: application/json
 
+###
+
+POST {{InfraManager_HostAddress}}/newservice
+Content-Type: application/json
+{
+   Name 
+         Description 
+         Location 
+         Type 
+         Topics 
+         ConsumerGroup 
+         Permissions 
+         Owner 
+         Tags 
+         EstimatedCost 
+}
 ###

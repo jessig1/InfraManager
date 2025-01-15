@@ -3,6 +3,8 @@
     public class Service
     {
         public int Id { get; set; }
+        public DateTime CreatedDate { get; set; }
+
         public string Name { get; set; }
         public string Description { get; set; }
         //path of source code repo
