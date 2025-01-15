@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfraManager", "InfraManager.csproj", "{ABDFF399-F549-4A06-A143-8787F085BE1F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABDFF399-F549-4A06-A143-8787F085BE1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABDFF399-F549-4A06-A143-8787F085BE1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABDFF399-F549-4A06-A143-8787F085BE1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABDFF399-F549-4A06-A143-8787F085BE1F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9F25549-3636-440B-9787-DD37E16CA273}
+	EndGlobalSection
+EndGlobal

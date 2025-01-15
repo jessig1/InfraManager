@@ -1,0 +1,6 @@
+@InfraManager_HostAddress = http://localhost:5152
+
+GET {{InfraManager_HostAddress}}/newservice/
+Accept: application/json
+
+###
