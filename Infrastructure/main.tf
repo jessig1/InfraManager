@@ -25,7 +25,6 @@ resource "azurerm_cosmosdb_postgresql_cluster" "infradb" {
   resource_group_name             = azurerm_resource_group.consumer_rg.name
   location                        = azurerm_resource_group.consumer_rg.location
   administrator_login_password    = "Mytestdb!"
-  coordinator_storage_quota_in_mb = 32768
   coordinator_vcore_count         = 2
   node_count                      = 0
 }
