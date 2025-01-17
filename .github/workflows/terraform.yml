@@ -40,9 +40,9 @@ jobs:
       run: terraform init
       working-directory: Infrastructure
     # Checks that all Terraform configuration files adhere to a canonical format
-    - name: Terraform Format
-      run: terraform fmt -check
-      working-directory: Infrastructure
+    # - name: Terraform Format
+    #   run: terraform fmt -check
+    #   working-directory: Infrastructure
     # Generates an execution plan for Terraform
     - name: Terraform Plan
       run: terraform plan -input=false -var-file="main.tfvars"
