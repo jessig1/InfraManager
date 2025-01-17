@@ -27,4 +27,5 @@ resource "azurerm_cosmosdb_postgresql_cluster" "infradb" {
   administrator_login_password    = "Mytestdb!"
   coordinator_vcore_count         = 2
   node_count                      = 0
+  coordinator_storage_quota_in_mb = 131072
 }
