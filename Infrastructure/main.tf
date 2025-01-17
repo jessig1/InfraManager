@@ -9,9 +9,10 @@ resource "azurerm_eventhub_namespace" "consumer_eventhub_namespace" {
   resource_group_name = azurerm_resource_group.consumer_rg.name
   sku                 = "Standard"
   capacity            = 1
+  minimum_tls_version = 1.2
 }
 
-resource "azurerm_eventhub" "example" {
+resource "azurerm_eventhub" "consumer" {
   name                = "consumerEventHub"
   namespace_name      = azurerm_eventhub_namespace.consumer_eventhub_namespace.name
   resource_group_name = azurerm_resource_group.consumer_rg.name
