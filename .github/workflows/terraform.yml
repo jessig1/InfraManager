@@ -47,8 +47,6 @@ name: 'Terraform'
 on:
   push:
     branches: [ "master" ]
-    paths:
-      - Infrastructure/**
       
 permissions:
   contents: read
