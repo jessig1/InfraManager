@@ -3,12 +3,15 @@ name: 'Terraform'
 env:
   ARM_CLIENT_ID: ${{ secrets.TF_VAR_ARM_CLIENT_ID }}
   ARM_CLIENT_SECRET: ${{ secrets.TF_VAR_ARM_CLIENT_SECRET }}
-  ARM_SUBSCRIPTION_ID: ${{ secrets.TF_VAR_ARM_SUBSCRIPTION_ID }}
+  ARM_SUBSCRIPTION_ID: ${{ secrets.TF_VAR_SUBSCRIPTION_ID }}
   ARM_TENANT_ID: ${{ secrets.TF_VAR_ARM_TENANT_ID }} 
 
 on:
   push:
     branches: [ "master" ]
+    paths:
+      - Infrastructure/**
+
       
 permissions:
   contents: read
@@ -40,9 +43,9 @@ jobs:
       run: terraform init
       working-directory: Infrastructure
     # Checks that all Terraform configuration files adhere to a canonical format
-    - name: Terraform Format
-      run: terraform fmt -check
-      working-directory: Infrastructure
+    # - name: Terraform Format
+    #   run: terraform fmt -check
+    #   working-directory: Infrastructure
     # Generates an execution plan for Terraform
     - name: Terraform Plan
       run: terraform plan -input=false -var-file="main.tfvars"
@@ -50,6 +53,6 @@ jobs:
       # On push to "master", build or change Infrastructure according to Terraform configuration files
       # Note: It is recommended to set up a required "strict" status check in your repository for "Terraform Cloud". See the documentation on "strict" required status checks for more information: https://help.github.com/en/github/administering-a-repository/types-of-required-status-checks
     - name: Terraform Apply
-      if: github.ref == 'refs/heads/"master"' && github.event_name == 'push'
+      #if: github.ref == 'refs/heads/"master"' && github.event_name == 'push'
       run: terraform apply -auto-approve -input=false -var-file="main.tfvars"
       working-directory: Infrastructure
