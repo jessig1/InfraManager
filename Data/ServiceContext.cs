@@ -8,5 +8,6 @@ namespace InfraManager.Data
         public ServiceContext(DbContextOptions<ServiceContext> options) : base(options) { }
 
         public DbSet<Service> Services => Set<Service>();
+        public DbSet<Consumer> Consumers => Set<Consumer>();
     }
 }
